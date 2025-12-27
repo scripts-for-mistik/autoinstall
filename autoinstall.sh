@@ -1,6 +1,6 @@
 #!/bin/sh
 ln -sf /usr/share/zoneinfo/Europe/Kyiv /etc/localtime
-hwclock —systohc
+hwclock -systohc
 
 echo en_US.UTF-8 UTF-8 >> /etc/locale.gen
 echo uk_UA.UTF-8 UTF-8 >> /etc/locale.gen
