@@ -38,6 +38,6 @@ echo 'export PATH="/home/svyatik/scripts/mini_programs:$PATH"' >> /home/mistik/.
 echo 'export PATH="/home/svyatik/scripts/mcaselector:$PATH"' >> /home/mistik/.bashrc
 echo 'export PATH="/home/svyatik/scripts/mcmap:$PATH"' >> /home/mistik/.bashrc
 
-pacman --needed -S base-utils
+pacman --needed -S base-devel
 
 pacman --needed -S firefox obs-studio telegram-desktop git xarchiver qbittorrent audacity gimp qalculate-qt imagemagick libreoffice-fresh gparted flameshot micro jdk8-openjdk jre11-openjdk jre17-openjdk jre21-openjdk git wget kdenlive android-tools cdrtools qemu-desktop 7zip unrar unzip zip xorg yt-dlp alsa-utils arch-install-scripts htop xdg-user-dirs mediainfo-gui mc scrot
