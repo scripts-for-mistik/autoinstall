@@ -14,3 +14,9 @@ cp -r ./ /home/mistik
 
 cd /home/mistik
 git clone https://github.com/scripts-for-mistik/scripts.git
+
+chmod +x /home/mistik/scripts/mcaselector/mcaselector
+cd /home/mistik/scripts/mcmap
+chmod +x *
+chmod +x /home/mistik/scripts/mini_programs/cubiomes-viewer
+chmod +x /home/mistik/scripts/mini_programs/screenshot
