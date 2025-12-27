@@ -5,7 +5,7 @@ cd yay-bin
 makepkg -si
 
 yay -S ttf-ms-fonts
-yay -S polymc-qt5-bin
+pacman -S prismlauncher
 yay -S xnviewmp
 
 git clone https://github.com/scripts-for-mistik/dotfiles.git
