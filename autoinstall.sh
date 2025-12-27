@@ -5,12 +5,9 @@ hwclock -systohc
 echo en_US.UTF-8 UTF-8 >> /etc/locale.gen
 echo uk_UA.UTF-8 UTF-8 >> /etc/locale.gen
 locale-gen
-localectl set-locale LANG=uk_UA.UTF-8
+echo "LANG=uk_UA.UTF-8" | sudo tee /etc/locale.conf
 
 echo pavilion > /etc/hostname
-echo 127.0.0.1 localhost >> /etc/hosts
-echo "::1       localhost" >> /etc/hosts
-echo 127.0.1.1 mistik >> /etc/hosts
 
 pacman -S networkmanager
 systemctl enable NetworkManager
