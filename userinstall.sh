@@ -30,3 +30,5 @@ mv zulu.7z ./zulu
 cd zulu
 7z x zulu.7z
 rm zulu.7z
+
+chmod +x /home/mistik/scripts/mcaselector/zulu/bin/java
