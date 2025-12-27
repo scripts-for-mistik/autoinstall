@@ -5,7 +5,7 @@ hwclock —systohc
 echo en_US.UTF-8 UTF-8 >> /etc/locale.gen
 echo uk_UA.UTF-8 UTF-8 >> /etc/locale.gen
 locale-gen
-localectl set-locale LANG=uk_UA.UTF-8 UTF-8
+localectl set-locale LANG=uk_UA.UTF-8
 
 echo pavilion > /etc/hostname
 echo 127.0.0.1 localhost >> /etc/hosts
