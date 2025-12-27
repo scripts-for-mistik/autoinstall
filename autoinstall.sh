@@ -27,10 +27,8 @@ grub-install /dev/sda
 echo GRUB_DISABLE_OS_PROBER=false >> /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
-pacman -S pipewire-pulse pipewire-alsa
-pacman -S xfce4 xfce4-goodies gvfs gvfs-mtp pavucontrol network-manager-applet
-
-mkdir /home/mistik
+pacman --needed -S pipewire-pulse pipewire-alsa
+pacman --needed -S xfce4 xfce4-goodies gvfs gvfs-mtp pavucontrol network-manager-applet
 
 echo EDITOR=micro >> /home/mistik/.bashrc
 echo export EDITOR >> /home/mistik/.bashrc
@@ -44,6 +42,8 @@ echo 'export PATH="/home/svyatik/scripts/mcmap:$PATH"' >> /home/mistik/.bashrc
 pacman --needed -S base-utils
 
 pacman --needed -S firefox obs-studio telegram-desktop git xarchiver qbittorrent audacity gimp qalculate-qt imagemagick libreoffice-fresh gparted flameshot micro jdk8-openjdk jre11-openjdk jre17-openjdk jre21-openjdk git wget kdenlive android-tools cdrtools qemu-desktop 7zip unrar unzip zip xorg yt-dlp alsa-utils arch-install-scripts htop xdg-user-dirs mediainfo-gui mc scrot
+
+su - mistik
 
 cd /tmp
 git clone https://aur.archlinux.org/yay-bin.git
