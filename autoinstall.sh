@@ -19,7 +19,7 @@ usermod -aG wheel,video,audio,storage,floppy mistik
 passwd
 passwd mistik
 
-pacman -S grub efibootmgr os-prober dosfstools ntfs-3g
+pacman -S grub os-prober dosfstools ntfs-3g
 grub-install /dev/sda
 echo GRUB_DISABLE_OS_PROBER=false >> /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
