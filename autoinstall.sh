@@ -1,6 +1,6 @@
 #!/bin/sh
 ln -sf /usr/share/zoneinfo/Europe/Kyiv /etc/localtime
-hwclock -systohc
+hwclock --systohc
 
 echo en_US.UTF-8 UTF-8 >> /etc/locale.gen
 echo uk_UA.UTF-8 UTF-8 >> /etc/locale.gen
@@ -9,17 +9,17 @@ echo "LANG=uk_UA.UTF-8" | sudo tee /etc/locale.conf
 
 echo pavilion > /etc/hostname
 
-pacman -S networkmanager
+pacman --needed -S networkmanager
 systemctl enable NetworkManager
 
-pacman -S sudo
+pacman --needed -S sudo
 echo "%wheel ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 useradd -m mistik
 usermod -aG wheel,video,audio,storage,floppy mistik
 passwd
 passwd mistik
 
-pacman -S grub os-prober dosfstools ntfs-3g
+pacman --needed -S grub os-prober dosfstools ntfs-3g
 grub-install /dev/sda
 echo GRUB_DISABLE_OS_PROBER=false >> /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
