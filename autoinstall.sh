@@ -16,7 +16,7 @@ pacman -S networkmanager
 systemctl enable NetworkManager
 
 pacman -S sudo
-echo %wheel ALL=(ALL:ALL) NOPASSWD: ALL >> /etc/sudoers
+echo "%wheel ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 useradd -m mistik
 usermod -aG wheel,video,audio,storage,floppy mistik
 passwd
