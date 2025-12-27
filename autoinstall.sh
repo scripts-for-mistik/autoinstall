@@ -34,7 +34,6 @@ echo EDITOR=micro >> /home/mistik/.bashrc
 echo export EDITOR >> /home/mistik/.bashrc
 echo "alias sudo='sudo '" >> /home/mistik/.bashrc
 echo alias 'qemu="qemu-system-x86_64"' >> /home/mistik/.bashrc
-echo "[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startxfce4" >> /home/mistik/.bash_profile
 echo 'export PATH="/home/svyatik/scripts/mini_programs:$PATH"' >> /home/mistik/.bashrc
 echo 'export PATH="/home/svyatik/scripts/mcaselector:$PATH"' >> /home/mistik/.bashrc
 echo 'export PATH="/home/svyatik/scripts/mcmap:$PATH"' >> /home/mistik/.bashrc
@@ -42,21 +41,3 @@ echo 'export PATH="/home/svyatik/scripts/mcmap:$PATH"' >> /home/mistik/.bashrc
 pacman --needed -S base-utils
 
 pacman --needed -S firefox obs-studio telegram-desktop git xarchiver qbittorrent audacity gimp qalculate-qt imagemagick libreoffice-fresh gparted flameshot micro jdk8-openjdk jre11-openjdk jre17-openjdk jre21-openjdk git wget kdenlive android-tools cdrtools qemu-desktop 7zip unrar unzip zip xorg yt-dlp alsa-utils arch-install-scripts htop xdg-user-dirs mediainfo-gui mc scrot
-
-su - mistik
-
-cd /tmp
-git clone https://aur.archlinux.org/yay-bin.git
-cd yay-bin
-makepkg -si
-
-yay -S ttf-ms-fonts
-yay -S polymc-qt5-bin
-yay -S xnviewmp
-
-git clone https://github.com/scripts-for-mistik/dotfiles.git
-cd dotfiles
-cp -r ./ /home/mistik
-
-cd /home/mistik
-git clone https://github.com/scripts-for-mistik/scripts.git
